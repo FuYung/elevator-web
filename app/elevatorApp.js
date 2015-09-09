@@ -14,7 +14,7 @@ var elevatorApp = angular.module('elevatorApp', ['ngResource', 'ui.router'])
                     }
                 })
                 .state('login', {
-                    url: '/',
+                    url: '/login',
                     templateUrl: 'login/login.html',
                     controller: 'loginCtrl',
                     ncyBreadcrumb: {
