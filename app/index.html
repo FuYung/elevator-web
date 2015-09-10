@@ -25,6 +25,7 @@
     <body ng-app="elevatorApp">
 
         <div ui-view=""></div>
+        <a href="#/index">进入首页</a>
 
         <!-- build:js(.) scripts/vendor.js -->
         <!-- bower:js -->
@@ -43,6 +44,10 @@
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="js/typeahead-bs2.min.js"></script>
+        <!--[if lte IE 8]>
+        <script src="js/excanvas.min.js"></script>
+        <![endif]-->
         <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
         <script src="js/jquery.ui.touch-punch.min.js"></script>
         <script src="js/jquery.slimscroll.min.js"></script>
@@ -51,7 +56,6 @@
         <script src="js/flot/jquery.flot.min.js"></script>
         <script src="js/flot/jquery.flot.pie.min.js"></script>
         <script src="js/flot/jquery.flot.resize.min.js"></script>
-        <script src="js/typeahead-bs2.min.js"></script>
 
         <script src="js/ace-extra.min.js"></script>
         <script src="js/ace-elements.js"></script>
