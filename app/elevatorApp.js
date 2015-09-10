@@ -8,7 +8,7 @@ var elevatorApp = angular.module('elevatorApp', ['ngResource', 'ui.router'])
             $stateProvider
                 .state('index', {
                     url: '/index',
-                    templateUrl: '../index.html',
+                    templateUrl: '../home/home.html',
                     ncyBreadcrumb: {
                         label: '首页'
                     }
@@ -16,7 +16,7 @@ var elevatorApp = angular.module('elevatorApp', ['ngResource', 'ui.router'])
                 .state('login', {
                     url: '/login',
                     templateUrl: 'login/login.html',
-                    controller: 'loginCtrl',
+                    controller: 'loginController',
                     ncyBreadcrumb: {
                         label: '登录'
                     }

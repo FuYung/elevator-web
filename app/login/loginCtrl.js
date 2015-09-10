@@ -3,9 +3,7 @@
 (function () {
     elevatorApp.controller('loginController', ['$rootScope', '$scope', '$state', 'userLogin', function ($rootScope, $scope, $state, userLogin) {
         $rootScope.logined = false;
-
         $scope.btnLoading = '登录';
-        consolog($scope.btnLoading);
         $scope.submitLoginForm = function () {
             $scope.btnLoading = '登录中...';
             $scope.loginMsg = null;

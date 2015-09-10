@@ -6,26 +6,25 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
         <!-- build:css(.) styles/vendor.css -->
         <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
         <!-- endbower -->
         <!-- endbuild -->
+
         <!-- build:css(.tmp) styles/main.css -->
-
-        <!--<link rel="stylesheet" href="styles/main.css">-->
-        <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../assets/css/font-awesome.min.css" />
-        <link rel="stylesheet" href="../assets/css/ace.min.css" />
-        <link rel="stylesheet" href="../assets/css/ace-rtl.min.css" />
-
+        <!-- basic styles -->
+        <link rel="stylesheet" href="styles/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" href="styles/ace.min.css" type="text/css" />
+        <link rel="stylesheet" href="styles/ace-rtl.min.css" type="text/css" />
+        <!-- fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
         <!-- endbuild -->
     </head>
     <body ng-app="elevatorApp">
 
-        <!-- Add your site or application content here -->
-        <div class="container">
-            <div ui-view ></div>
-        </div>
+        <div ui-view=""></div>
 
         <!-- build:js(.) scripts/vendor.js -->
         <!-- bower:js -->
@@ -38,15 +37,31 @@
         <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <script src="bower_components/angular-touch/angular-touch.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="js/jquery.ui.touch-punch.min.js"></script>
+        <script src="js/jquery.slimscroll.min.js"></script>
+        <script src="js/jquery.easy-pie-chart.min.js"></script>
+        <script src="js/jquery.sparkline.min.js"></script>
+        <script src="js/flot/jquery.flot.min.js"></script>
+        <script src="js/flot/jquery.flot.pie.min.js"></script>
+        <script src="js/flot/jquery.flot.resize.min.js"></script>
+        <script src="js/typeahead-bs2.min.js"></script>
+
+        <script src="js/ace-extra.min.js"></script>
+        <script src="js/ace-elements.js"></script>
+        <script src="js/ace.min.js"></script>
         <script src="elevatorApp.js"></script>
         <script src="config-sample.js"></script>
+        <!-- login -->
         <script src="login/loginCtrl.js"></script>
         <script src="login/loginService.js"></script>
+
         <!-- endbuild -->
     </body>
 </html>
