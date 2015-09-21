@@ -4,7 +4,7 @@ if (!("ace" in window)) {
 jQuery(function (a) {
     window.ace.click_event = a.fn.tap ? "tap" : "click"
 });
-jQuery(function (a) {
+jQuery(function () {
     ace.handle_side_menu(jQuery);
     ace.enable_search_ahead(jQuery);
     ace.general_things(jQuery);
