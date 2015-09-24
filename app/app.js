@@ -5,20 +5,13 @@
  */
 var app;
 app = angular.module('app', [
-    'ngAnimate',
-    'ngCookies',
     'ngResource',
-    'ngSanitize',
-    'ngTouch',
-    'ngStorage',
     'ui.router',
     'ui.bootstrap',
-    'ui.jq',
-    'ui.load',
-    'ui.validate'
+    'ui.load'
 ])
-    .controller('AppCtrl', ['$scope', '$localStorage',
-        function ($scope, $localStorage) {
+    .controller('AppCtrl', ['$scope',
+        function ($scope) {
             $scope.app = {
                 name: 'Elevator',
                 version: '1.0.0',
@@ -46,19 +39,19 @@ app = angular.module('app', [
                 }
             };
 
-            // save settings to local storage
-            if (angular.isDefined($localStorage.settings)) {
-                $scope.app.settings = $localStorage.settings;
-            } else {
-                $localStorage.settings = $scope.app.settings;
-            }
+            //// save settings to local storage
+            //if (angular.isDefined($localStorage.settings)) {
+            //    $scope.app.settings = $localStorage.settings;
+            //} else {
+            //    $localStorage.settings = $scope.app.settings;
+            //}
             $scope.$watch('app.settings', function () {
                 if ($scope.app.settings.asideDock && $scope.app.settings.asideFixed) {
                     // aside dock and fixed must set the header fixed.
                     $scope.app.settings.headerFixed = true;
                 }
                 // save to local storage
-                $localStorage.settings = $scope.app.settings;
+                //$localStorage.settings = $scope.app.settings;
             }, true);
         }])
 ;
