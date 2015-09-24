@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-    elevatorApp.controller('loginController', ['$rootScope', '$scope', '$state', 'userLogin', function ($rootScope, $scope, $state, userLogin) {
+    app.controller('LoginCtrl', ['$rootScope', '$scope', '$state', 'userLogin', function ($rootScope, $scope, $state, userLogin) {
         $rootScope.logined = false;
         $scope.btnLoading = '登录';
         $scope.submitLoginForm = function () {

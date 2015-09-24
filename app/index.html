@@ -4,85 +4,83 @@
         <meta charset="utf-8">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css(.) styles/vendor.css -->
         <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/angular-bootstrap-nav-tree/dist/abn_tree.css" />
+        <link rel="stylesheet" href="bower_components/ngImgCrop/compile/minified/ng-img-crop.css" />
+        <link rel="stylesheet" href="bower_components/angular-ui-select/dist/select.css" />
+        <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
+        <link rel="stylesheet" href="bower_components/angularjs-toaster/toaster.css" />
+        <link rel="stylesheet" href="bower_components/ng-grid/ng-grid.css" />
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:css(.tmp) styles/main.css -->
         <!-- basic styles -->
-        <link rel="stylesheet" href="styles/bootstrap.min.css"/>
-        <link rel="stylesheet" href="styles/font-awesome.min.css" type="text/css" />
-        <!--[if IE 7]>
-        <link rel="stylesheet" href="styles/font-awesome-ie7.min.css" />
-        <![endif]-->
-        <link rel="stylesheet" href="styles/ace.min.css" type="text/css" />
-        <link rel="stylesheet" href="styles/ace-rtl.min.css" type="text/css" />
-        <link rel="stylesheet" href="styles/ace-skins.min.css" />
-        <!--[if lte IE 8]>
-        <link rel="stylesheet" href="styles/ace-ie.min.css" />
-        <![endif]-->
-        <!--[if IE 7]>
-        <link rel="stylesheet" href="styles/font-awesome-ie7.min.css" />
-        <![endif]-->
-        <!--[if lt IE 9]>
-        <script src="js/html5shiv.js"></script>
-        <script src="js/respond.min.js"></script>
-        <![endif]-->
+        <link rel="stylesheet" href="css/animate.css" type="text/css" />
+        <link rel="stylesheet" href="css/simple-line-icons.css" type="text/css" />
+        <link rel="stylesheet" href="css/app.css" type="text/css" />
         <!-- endbuild -->
 
-        <!--[if lte IE 8]>
-        <script src="js/excanvas.min.js"></script>
-        <![endif]-->
     </head>
-    <body ng-app="elevatorApp">
-        <a href="#/index">进入首页</a>
-        <ui-view></ui-view>
+    <body ng-app="app">
+
+        <div class="app" id="app"  ng-controller="AppCtrl" ng-class="{'app-header-fixed':app.settings.headerFixed, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container}" ui-view></div>
+
         <!-- build:js(.) scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-animate/angular-animate.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-resource/angular-resource.js"></script>
         <script src="bower_components/angular-touch/angular-touch.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="bower_components/angular-translate/angular-translate.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/ngstorage/ngStorage.js"></script>
+        <script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-ui-utils/ui-utils.js"></script>
+        <script src="bower_components/moment/moment.js"></script>
+        <script src="bower_components/screenfull/dist/screenfull.js"></script>
+        <script src="bower_components/angular-bootstrap-nav-tree/dist/abn_tree_directive.js"></script>
+        <script src="bower_components/angular-file-upload/angular-file-upload.min.js"></script>
+        <script src="bower_components/ngImgCrop/compile/minified/ng-img-crop.js"></script>
+        <script src="bower_components/angular-ui-select/dist/select.js"></script>
+        <script src="bower_components/fullcalendar/dist/fullcalendar.js"></script>
+        <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
+        <script src="bower_components/angularjs-toaster/toaster.js"></script>
+        <script src="bower_components/ng-grid/build/ng-grid.js"></script>
+        <script src="bower_components/textAngular/dist/textAngular.min.js"></script>
+        <script src="bower_components/venturocket-angular-slider/build/angular-slider.js"></script>
+        <script src="bower_components/videogular/videogular.js"></script>
+        <script src="bower_components/videogular-controls/controls.js"></script>
+        <script src="bower_components/videogular-buffering/buffering.js"></script>
+        <script src="bower_components/videogular-overlay-play/overlay-play.js"></script>
+        <script src="bower_components/videogular-poster/poster.js"></script>
+        <script src="bower_components/videogular-ima-ads/ima-ads.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/typeahead-bs2.min.js"></script>
+        <!-- app -->
+        <script src="app.js"></script>
+        <script src="config.js"></script>
+        <script src="config.router.js"></script>
 
-        <!--[if lte IE 8]>
-        <script src="js/excanvas.min.js"></script>
-        <![endif]-->
-
-        <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
-        <script src="js/jquery.ui.touch-punch.min.js"></script>
-        <script src="js/jquery.slimscroll.min.js"></script>
-        <script src="js/jquery.easy-pie-chart.min.js"></script>
-        <script src="js/jquery.sparkline.min.js"></script>
-        <script src="js/flot/jquery.flot.min.js"></script>
-        <script src="js/flot/jquery.flot.pie.min.js"></script>
-        <script src="js/flot/jquery.flot.resize.min.js"></script>
-
-        <script src="js/ace-elements.js"></script>
-        <script src="js/ace.js"></script>
-
-        <script src="elevatorApp.js"></script>
-        <script src="config-sample.js"></script>
         <!-- login -->
         <script src="login/loginCtrl.js"></script>
         <script src="login/loginService.js"></script>
 
+        <script src="js/controllers/bootstrap.js"></script>
         <!-- endbuild -->
     </body>
 </html>
