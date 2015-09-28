@@ -17,4 +17,11 @@ app.config(['$stateProvider', function ($stateProvider) {
                 label: '登录'
             }
         })
+        .state('index.brand', {
+            url: '/brand',
+            templateUrl: 'brand/brand.html',
+            ncyBreadcrumb: {
+                label: '品牌管理'
+            }
+        })
 }]);
