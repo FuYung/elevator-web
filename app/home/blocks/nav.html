@@ -20,16 +20,13 @@
                 </a>
             </li>
             <li ui-sref-active="active">
-                <a ui-sref="app.dashboard-v2">
+                <a ui-sref="index.elevator">
                     <b class="label bg-info pull-right">N</b>
                     <span>电梯信息</span>
                 </a>
             </li>
         </ul>
     </li>
-
-
-
 
     <li class="line dk"></li>
 
@@ -48,11 +45,48 @@
         </a>
         <ul class="nav nav-sub dk">
             <li ui-sref-active="active">
-                <a ui-sref="layout.app">
+                <a ui-sref="index.user">
                     <span>用户信息</span>
                 </a>
             </li>
 
+        </ul>
+    </li>
+
+    <li class="line dk hidden-folded"></li>
+    <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+        <span>其他模块</span>
+    </li>
+    <li>
+        <a href class="auto">
+            <span class="pull-right text-muted">
+                <i class="fa fa-fw fa-angle-right text"></i>
+                <i class="fa fa-fw fa-angle-down text-active"></i>
+            </span>
+            <b class="badge bg-info pull-right">1</b>
+            <i class="glyphicon glyphicon-th"></i>
+            <span>其他</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li ui-sref-active="active">
+                <a ui-sref="index.uiTree">
+                    <span>ui_tree</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav nav-sub dk">
+            <li ui-sref-active="active">
+                <a ui-sref="index.uiChart">
+                    <span>ui_chart</span>
+                </a>
+            </li>
+        </ul>
+        <ul class="nav nav-sub dk">
+            <li ui-sref-active="active">
+                <a ui-sref="index.uiWidgets">
+                    <span>ui_widgets</span>
+                </a>
+            </li>
         </ul>
     </li>
 
@@ -69,7 +103,7 @@
         </a>
     </li>
     <li>
-        <a ui-sref="app.docs">
+        <a ui-sref="index.docs">
             <i class="icon-question icon"></i>
             <span>Documents</span>
         </a>
