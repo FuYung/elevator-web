@@ -1,62 +1,46 @@
 <!--<div class="bg-light lter b-b wrapper-md">--><!--<h1 class="m-n font-thin h3">Datatable</h1>--><!--</div>-->
-<div class="wrapper-md">
+<div class="wrapper-md" ng-controller="brandCtrl">
     <div class="panel panel-default">
         <div class="panel-heading">
             品牌管理
         </div>
+        <nav class="navbar navbar-default">
+            <form class="navbar-form ">
+                <div class="form-group">
+                    <!--search-->
+                    <input type="text" ng-model="search" class="form-control" placeholder="Search" title=""/>
+                </div>
+            </form>
+        </nav>
         <div class="table-responsive">
             <table ui-jq="dataTable" class="table table-striped m-b-none">
                 <thead>
-                    <tr>
-                        <th>序号</th>
-                        <th>品牌名称</th>
-                        <th>销售单位</th>
-                        <th>联系人</th>
-                        <th>手机号码</th>
-                        <th>固话号码</th>
-                        <th>邮箱</th>
-                        <th>QQ</th>
-                        <th>单位地址</th>
-                        <th>单位电话</th>
-                    </tr>
+                <tr>
+                    <th>序号</th>
+                    <th>品牌名称</th>
+                    <th>销售单位</th>
+                    <th>联系人</th>
+                    <th>手机号码</th>
+                    <th>固话号码</th>
+                    <th>邮箱</th>
+                    <th>QQ</th>
+                    <th>单位地址</th>
+                    <th>单位电话</th>
+                </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Rendering engine</td>
-                        <td>Browser</td>
-                        <td>Platform(s)</td>
-                        <td>CSS grade</td>
-                        <td>Rendering engine</td>
-                        <td>Browser</td>
-                        <td>Platform(s)</td>
-                        <td>Engine version</td>
-                        <td>CSS grade</td>
-                        <td>Engine version</td>
-                    </tr>
-                    <tr>
-                        <td>Rendering engine</td>
-                        <td>Browser</td>
-                        <td>Platform(s)</td>
-                        <td>Engine version</td>
-                        <td>CSS grade</td>
-                        <td>Rendering engine</td>
-                        <td>Platform(s)</td>
-                        <td>CSS grade</td>
-                        <td>Engine version</td>
-                        <td>CSS grade</td>
-                    </tr>
-                    <tr>
-                        <td>Rendering engine</td>
-                        <td>Browser</td>
-                        <td>Platform(s)</td>
-                        <td>Engine version</td>
-                        <td>CSS grade</td>
-                        <td>Rendering engine</td>
-                        <td>Browser</td>
-                        <td>Platform(s)</td>
-                        <td>Engine version</td>
-                        <td>Engine version</td>
-                    </tr>
+                <tr ng-repeat="brand in brandList | filter: search">
+                    <td>{{$index+1}}</td>
+                    <td>{{brand.name}}</td>
+                    <td>{{brand.sale_com}}</td>
+                    <td>{{brand.sale_linkman}}</td>
+                    <td>{{brand.sale_mobile}}</td>
+                    <td>{{brand.sale_fixed_phone}}</td>
+                    <td>{{brand.sale_email}}</td>
+                    <td>{{brand.sale_qq}}</td>
+                    <td>{{brand.address}}</td>
+                    <td>{{brand.mobile}}</td>
+                </tr>
                 </tbody>
             </table>
         </div>
